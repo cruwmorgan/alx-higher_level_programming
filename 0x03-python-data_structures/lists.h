@@ -13,4 +13,6 @@ def multiple_returns(sentence):
 def max_integer(my_list=[]):
 def divisible_by_2(my_list=[]):
 def delete_at(my_list=[], idx=0):
+int is_palindrome(listint_t **head);
+int check_pal(listint_t **head, listint_t *last);
 #endif /*LISTS_H*/
