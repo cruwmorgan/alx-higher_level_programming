@@ -12,7 +12,8 @@ if __name__ == "__main__":
     username = argv[1]
     password = args[2]
     dbname = args[3]
-    db = MySQLdb.connect("localhost", username, password, dbname, 3306)
+    db = MySQLdb.connect(host="localhost", user=username, passwd=password,
+            db=dbname, port=3306 )
     cursor = db.cursor()
     cursor.execute("SELECT cities.id, cities.name, states.name\
                            FROM cities INNER JOIN states\
