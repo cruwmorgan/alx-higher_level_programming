@@ -10,5 +10,5 @@ if __name__ == "__main__":
         the_page = response.read()
         data = the_page.decode('utf-8')
         string = 'Body response:\n\t- type: {}\n\t- content: {}\n\t- \
-                utf8 content: {}'.format(type(the_page), the_page, data)
+utf8 content: {}'.format(type(the_page), the_page, data)
         print(string)
