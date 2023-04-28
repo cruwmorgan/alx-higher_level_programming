@@ -17,6 +17,6 @@ if __name__ == "__main__":
         if len(obj) == 0:
             print('No result')
         else:
-            print('[{}] {}'.format(obj['id'], obj['name'])
+            print('[{}] {}'.format(obj['id'], obj['name']))
     except:
         print('Not a valid JSON')
