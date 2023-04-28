@@ -3,7 +3,7 @@
 the body of the response.
 """
 
-from requests import post
+from requests import get
 from sys import argv
 
 if __name__ == '__main__':
