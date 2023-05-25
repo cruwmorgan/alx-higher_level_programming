@@ -14,9 +14,9 @@ request(url, function (error, response, body) {
         if (error) {
           console.error(error);
         } else {
-	  const info = JSON.parse(body);
+          const info = JSON.parse(body);
           matchchar.push(info.name);
-	}
+        }
       });
     });
     console.log(matchchar);
