@@ -9,16 +9,16 @@ request(url, function (error, response, body) {
     console.error(error);
   } else {
     data = JSON.parse(body);
-    data.characters.forEach(function (result) {
-      request(result, function (error, response, body) {
-        if (error) {
-          console.error(error);
-        } else {
-          const info = JSON.parse(body);
-          matchchar.push(info.name);
-        }
-      });
+    data.characters.forEach(function (character) {
+      matchchar.push(character);
     });
-    console.log(matchchar);
   }
+  matchchar.forEach(function (chat) {
+    request(chat, function (error, response, body) {
+      if (!error && response.statusCode === 200) {
+        const info = JSON.parse(body);
+        console.log(info.name);
+      }
+    });
+  });
 });
