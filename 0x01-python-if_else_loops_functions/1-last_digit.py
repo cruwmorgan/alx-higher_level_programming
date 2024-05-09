@@ -3,7 +3,7 @@ import random
 number = random.randint(-10000, 10000)
 fstr = repr(number)
 sign = fstr[0]
-if sign == "-":
+if sign == "-" and fstr[-1] != 0:
     last_no = int(fstr[0] + fstr[-1])
 else:
     last_no = int(fstr[-1])
