@@ -2,7 +2,11 @@
 import random
 number = random.randint(-10000, 10000)
 fstr = repr(number)
-last_no = int(fstr[-1])
+sign = fstr[0]
+if sign == "-":
+    last_no = int(fstr[0] + fstr[-1])
+else:
+    last_no = int(fstr[-1])
 
 if last_no > 5:
     print("Last digit of {} is {} and is greater than 5".format(
