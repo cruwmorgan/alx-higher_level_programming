@@ -4,4 +4,4 @@ def print_last_digit(number):
     sign = fstr[0]
     last_no = int(fstr[-1])
     print("{}".format(last_no), end="")
-    return(last_no)
+    return (last_no)
